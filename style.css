@@ -1,0 +1,107 @@
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Upgraded Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: #000;
+  background-image: linear-gradient(135deg, #1a1a1a, #000000);
+  padding: 0 20px;
+  text-align: center;
+  border-bottom: 5px solid #90D1E8;
+}
+
+/* Upgraded Header H1 */
+header h1 {
+  font-family: 'Arial Black', sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    height: 10vh;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about {
+    padding: 30px 15px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* Pseudo-element for decorative effect */
+header h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  border-radius: 10px;
+  filter: blur(8px);
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
